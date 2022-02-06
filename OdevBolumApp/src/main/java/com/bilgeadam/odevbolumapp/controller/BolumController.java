@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 import java.util.Optional;
@@ -51,4 +52,15 @@ public class BolumController {
 
         //return getBolumAd(id).getAd();
     }
+
+    private String getSehirAd(Long id) {
+        String sehirURL = "http://localhost8240";
+
+        RestTemplate restTemplate = new RestTemplate();
+
+        String sehirAd = restTemplate.getForObject(sehirURL + "/sehir/" + id, String.class);
+
+        return sehirURL;
+    }
+
 }

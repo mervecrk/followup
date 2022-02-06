@@ -41,7 +41,7 @@ public class PersonelController {
     public String getPersonelBolumSehir(@PathVariable("id") Long id) {
         Personel personel = getKisi(id);
 
-        String bolumAd = getBolumAd(personel.getNo());
+        String bolumAd = getBolumAd(personel.getBolumNo());
 
         return personel.getAd() + " " + personel.getSoyad() + " " + bolumAd;
     }
