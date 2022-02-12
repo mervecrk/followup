@@ -7,11 +7,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
 @Entity
 @Data
 public class Personel {
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,5 +17,7 @@ public class Personel {
     private String ad;
     private String soyad;
     private long bolumNo;
+
+
 
 }

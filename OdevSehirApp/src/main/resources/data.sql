@@ -1,1 +1,0 @@
-insert into sehir(ad, bolum_no) values ('Mardin', '5001');
